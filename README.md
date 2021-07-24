@@ -4,7 +4,7 @@ Step 1 - Installing rbenv and Dependencies
 
 `$ sudo apt update`
 
-we are going to install all Ruby dependencies first.
+We are going to install all Ruby dependencies first.
 `$ sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev`
 
 Next, we are going to clone the official Rbenv repository into the home directory and add its binary to `$PATH` in order to use `rbenv` command line utility.
