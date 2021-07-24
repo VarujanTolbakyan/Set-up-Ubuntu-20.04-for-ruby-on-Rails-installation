@@ -2,31 +2,31 @@
 
 Step 1 - Installing rbenv and Dependencies
 
-run command `sudo apt update`
+`$ sudo apt update`
 
 we are going to install all Ruby dependencies first.
-run command `sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev`
+`$ sudo apt install autoconf bison build-essential libssl-dev libyaml-dev libreadline6-dev zlib1g-dev libncurses5-dev libffi-dev libgdbm6 libgdbm-dev`
 
-Next, we are going to clone the official Rbenv repository into the home directory and add its binary to $PATH in order to use rbenv command line utility.
+Next, we are going to clone the official Rbenv repository into the home directory and add its binary to `$PATH` in order to use `rbenv` command line utility.
 
 
 
-run command `git clone https://github.com/rbenv/rbenv.git ~/.rbenv`
-run command `echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
+`$ git clone https://github.com/rbenv/rbenv.git ~/.rbenv`
+`$ echo 'export PATH="$HOME/.rbenv/bin:$PATH"' >> ~/.bashrc`
 
 
 
 To load Rbenv automatically when the CLI starts.
-run command `echo 'eval "$(rbenv init -)"' >> ~/.bashrc` or `echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
+`$ echo 'eval "$(rbenv init -)"' >> ~/.bashrc` or `echo 'eval "$(rbenv init -)"' >> ~/.zshrc`
 
 
 Then apply the changes you made to the ~ / .bashrc file for the current shell session
-run command `source ~/.bashrc`
+`$ source ~/.bashrc`
 
 
-Verify that rbenv is configured correctly with the type command, which displays additional information about the rbenv command
+Verify that `rbenv` is configured correctly with the type command, which displays additional information about the rbenv command
 
-run command `type rbenv`
+`$ type rbenv`
 
 The terminal window will display the following
 
@@ -53,7 +53,7 @@ rbenv ()
 Then install the ruby-build plugin. This plugin adds rbenv install command to simplify the process of installing new Ruby versions.
 
 
-run command `git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build`
+`$ git clone https://github.com/rbenv/ruby-build.git ~/.rbenv/plugins/ruby-build`
 
 ******************************************************************************************************************************************
 
@@ -62,43 +62,43 @@ Step 2 - Installing Ruby with ruby-build
 
 First, let's list all available Ruby versions.
 
-use command `rbenv install -l`
+`$ rbenv install -l`
 
-Use `rbenv install --list-all / -L` to show all local versions.
+Use `$ rbenv install --list-all / -L` to show all local versions.
 
 
 
 This command should display a long list of versions that you can install.
 
-use command `rbenv install 2.7.3`
+`$ rbenv install 2.7.3`
 
 Once the installation is complete, set the new version as the default Ruby version using the global subcommand.
 
-run command `rbenv global 2.7.3`
+`$ rbenv global 2.7.3`
 
 ********************************************************************************************************************************************
 
 
 Step 3 - Working with Gems
 
-Gems are a way to distribute Ruby libraries. You can use the gem command to manage this distribution. We use this command to install Rails.
+Gems are a way to distribute Ruby libraries. You can use the `gem` command to manage this distribution. We use this command to install Rails.
 
 When installing the gem, the installation routine generates local documentation. This can significantly increase the installation time of the gem, so disable the generation of local documentation by creating ~ / .gemrc file with a configuration parameter to disable this feature:
 
 
-run command `echo "gem: --no-document" > ~/.gemrc`
+`$ echo "gem: --no-document" > ~/.gemrc`
 
 
 Next, install the Bundler component as Rails depends on it.
 
 
-run command `gem install bundler`
+`$ gem install bundler`
 
 
 You can use the gem env command (the `env` subcommand stands for environment) to learn more about the environment and gems configuration. You can see the gems installation location with the `home` argument, something like
 
 
-run command `gem env home`
+`$ gem env home`
 
 
 *******************************************************************************************************************************************
@@ -106,7 +106,7 @@ run command `gem env home`
 
 Step 5 - Updating rbenv
 
-Since you installed rbenv manually using Git, you can update your installed version to the latest at any time by running the git pull command in the `~ /.rbenv` directory
+Since you installed `rbenv` manually using Git, you can update your installed version to the latest at any time by running the git pull command in the `~ /.rbenv` directory
 
 
 `$ cd ~/.rbenv`
@@ -118,7 +118,7 @@ Since you installed rbenv manually using Git, you can update your installed vers
 
 Step 6 - Removing Ruby Versions
 
-After downloading additional Ruby versions, there may be too many versions in the ~ / .rbenv / versions directory. Use the uninstall subcommand in the ruby-build plugin to remove unnecessary previous versions.
+After downloading additional Ruby versions, there may be too many versions in the ~ /.rbenv / versions directory. Use the uninstall subcommand in the ruby-build plugin to remove unnecessary previous versions.
 
 For example, the following command will remove Ruby 2.1.3
 
@@ -144,7 +144,7 @@ Find the following two lines in the file and delete them
 `eval "$(rbenv init -)"`
 
 
-Then uninstall rbenv and all installed Ruby versions with the following command
+Then uninstall `rbenv` and all installed Ruby versions with the following command
 
 `rm -rf 'rbenv root'`
 
@@ -152,7 +152,7 @@ Then uninstall rbenv and all installed Ruby versions with the following command
 ******* Installing Ruby on Rail and Dependencies **********
 
 
-Install the curl and other required packages for Ruby on Rails installation.
+Install the `curl` and other required packages for Ruby on Rails installation.
 
 `$ sudo apt update`
 
