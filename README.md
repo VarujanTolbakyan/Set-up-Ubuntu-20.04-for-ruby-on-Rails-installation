@@ -151,7 +151,7 @@ First, let's list all available Ruby versions.
 `rm -rf 'rbenv root'`
 
 
-##******* Installing Ruby on Rail and Dependencies **********
+## ******* Installing Ruby on Rail and Dependencies **********
 
 
 ### Install the `curl` and other required packages for Ruby on Rails installation.
